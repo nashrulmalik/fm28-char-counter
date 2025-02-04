@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Neutral Colors */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-100: #F2F2F7;
+  --color-neutral-200: #E4E4EF;
+  --color-neutral-600: #404254;
+  --color-neutral-700: #2A2B37;
+  --color-neutral-800: #21222C;
+  --color-neutral-900: #12131A;
+
+  /* Purple Colors */
+  --color-purple-400: #D3A0FA;
+  --color-purple-500: #C27CF8;
+
+  /* Yellow Colors */
+  --color-yellow-500: #FF9F00;
+
+  /* Orange Colors */
+  --color-orange-400: #FA9A82;
+  --color-orange-500: #FE8159;
+  --color-orange-800: #DA3701;
+  
+  --background-image-light-pattern: url("/bg-light-theme.png");
+  --background-image-dark-pattern: url("/bg-dark-theme.png");
+}
+
+:root {
+  --foreground: #171717;
+}
+
+.dark {
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+}
+
+@layer base {
+  body {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+#root {
+  max-width: 1054px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
